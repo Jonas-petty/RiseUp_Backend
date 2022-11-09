@@ -44,4 +44,14 @@ public class UsuarioController {
                     return usuarioRepository.save(usuario);
                 });
     }
+
+    // Deleta um usuário pelo id
+    @DeleteMapping("usuario/{id}")
+    String deleteUsuario(@PathVariable Long id) {
+        if (usuarioRepository.existsById(id)) {
+            usuarioRepository.deleteById(id);
+            return "Usuário com id " + id + " foi deletado";
+        }
+        return "Usuário com id " + id + " não foi encontrado";
+    }
 }
