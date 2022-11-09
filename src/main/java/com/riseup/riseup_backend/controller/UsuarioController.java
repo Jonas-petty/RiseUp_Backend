@@ -33,5 +33,15 @@ public class UsuarioController {
         return usuarioRepository.findById(id);
     }
 
-
+    // Altera um usuário pelo id
+    @PutMapping("usuario/{id}")
+    Optional<Usuario> updateUsuario(@RequestBody Usuario newUsuario, @PathVariable Long id) {
+        return usuarioRepository.findById(id)
+                .map(usuario -> {
+                    usuario.setNome(newUsuario.getNome());
+                    usuario.setEmail(newUsuario.getEmail());
+                    usuario.setSenha(newUsuario.getSenha());
+                    return usuarioRepository.save(usuario);
+                });
+    }
 }
