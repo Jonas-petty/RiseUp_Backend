@@ -9,6 +9,7 @@ a residência de Software do Porto Digital.
 - Java JDK
 - Spring Framework
 - Maven
+- PostgreSQL
 
 ## 🔧 Como utilizar:
 
@@ -17,6 +18,7 @@ a residência de Software do Porto Digital.
 - Java JDK
 - Maven
 - IDE ex.: VSCode, IntelliJ, Eclipse, NetBeans
+- Uma database no PostgreSQL chamada riseup
 
 
 Obs: Use a IDE para rodar o programa.
@@ -46,4 +48,12 @@ obs: O objeto do Usuário de ser:
     "senha": "senhaUsuario123"
 }
 ```
+
+---
+
+## Propostas Futuras:
+
+- Adicinar todas as entidades restantes e seus métodos REST
+- Integrar com o Front-end
+- Hospedar a API em algum serviço de nuvem, faciltando sua utilização
 
