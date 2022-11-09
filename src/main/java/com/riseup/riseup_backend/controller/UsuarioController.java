@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @CrossOrigin("http://127.0.0.1:5173")
@@ -20,8 +21,17 @@ public class UsuarioController {
         return usuarioRepository.save(newUsuario);
     }
 
+    // Retorna todos os usuários cadastrados
     @GetMapping("/usuarios")
     List<Usuario> getAllUsuarios() {
         return usuarioRepository.findAll();
     }
+
+    // Retorna um usuário pelo id
+    @GetMapping("usuario/{id}")
+    Optional<Usuario> getUsuarioById(@PathVariable Long id) {
+        return usuarioRepository.findById(id);
+    }
+
+
 }
