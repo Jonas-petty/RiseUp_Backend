@@ -23,6 +23,9 @@ a residência de Software do Porto Digital.
 
 Obs: Use a IDE para rodar o programa.
 
+* Execute a Classe `RiseupBackendApplication.java`;
+* A API deve estar funcionando na porta `8080`
+
 ### Endereços para utilização:
 
 Para Adicionar um novo usuário  
